@@ -1,0 +1,108 @@
+{% extends 'shopping/addon.html' %}
+{% load static %}
+{% block content %}     
+      <!-- banner bg main start -->
+     
+      <!-- banner bg main end -->
+      <!-- electronic section start -->
+      <div class="fashion_section">
+         <div id="electronic_main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <h1 class="fashion_taital">Computers & Accessories</h1>
+                     <div class="fashion_section_2">
+                        <div class="row">
+                           {% for computers in computers %}
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">{{computers.name}}</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">{{computers.price}}MMK</span></p>
+                                 <div class="electronic_img"><img src="{{computers.imageURL}}"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="details/{{computers.id}}">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           {% endfor %}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="fashion_taital">Computers & Accessories</h1>
+                     <div class="fashion_section_2">
+                        <div class="row">
+                           {% for laptops in laptops %}
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">{{laptops.name}}</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">{{laptops.price}}MMK</span></p>
+                                 <div class="electronic_img"><img src="{{laptops.imageURL}}"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           {% endfor %}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="fashion_taital">Computers & Accessories</h1>
+                     <div class="fashion_section_2">
+                        <div class="row">
+                           {% for mobile in mobile %}
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">{{mobile.name}}</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">{{mobile.price}}MMK</span></p>
+                                 <div class="electronic_img"><img src="{{mobile.imageURL}}"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           {% endfor %}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#electronic_main_slider" role="button" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#electronic_main_slider" role="button" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+            </a>
+         </div>
+      </div>
+      <!-- electronic section end -->
+      <!-- footer section start -->
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="{% static 'scripts/jquery.min.js' %}"></script>
+      <script src="{% static 'scripts/popper.min.js' %}"></script>
+      <script src="{% static 'scripts/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'scripts/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'scripts/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'scripts/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'scripts/custom.js' %}"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script>
+
+{% endblock content %}

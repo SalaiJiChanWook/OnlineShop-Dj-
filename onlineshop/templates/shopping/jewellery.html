@@ -1,0 +1,109 @@
+{% extends 'shopping/addon.html' %}
+{% load static %}
+{% block content %}      
+      <!-- banner bg main end -->
+      <!-- jewellery  section start -->
+      <div class="jewellery_section">
+         <div id="jewellery_main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <h1 class="fashion_taital">Jewellery Accessories</h1>
+                     <div class="fashion_section_2">
+                        <div class="row">
+                           {% for necklace in necklace %}
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">{{necklace.name}}</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">{{necklace.price}}MMK</span></p>
+                                 <div class="jewellery_img"><img src="{{ necklace.imageURL }}"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="{% url 'index' %}">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           {% endfor %}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="fashion_taital">Jewellery Accessories</h1>
+                     <div class="fashion_section_2">
+                        <div class="row">
+                           {% for rings in rings %}
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">{{rings.name}}</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">{{rings.price}}MMK</span></p>
+                                 <div class="jewellery_img"><img src="{{rings.imageURL}}"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="{% url 'index' %}">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           {% endfor %}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="fashion_taital">Jewellery Accessories</h1>
+                     <div class="fashion_section_2">
+                        <div class="row">
+                           {% for earRings in earRings %}
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">{{earRings.name}}</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">{{earRings.price}}MMK</span></p>
+                                 <div class="jewellery_img"><img src="{{earRings.imageURL}}"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="{% url 'index' %}">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           {% endfor %}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#jewellery_main_slider" role="button" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#jewellery_main_slider" role="button" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+            </a>
+            <div class="loader_main">
+               <div class="loader"></div>
+            </div>
+         </div>
+      </div>
+      <!-- jewellery  section end -->
+      <!-- footer section start -->
+
+      <!-- copyright section end -->
+      <!-- Javascript files--> 
+      <script src="{% static 'scripts/jquery.min.js' %}"></script>
+      <script src="{% static 'scripts/popper.min.js' %}"></script>
+      <script src="{% static 'scripts/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'scripts/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'scripts/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'scripts/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'scripts/custom.js' %}"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script>
+{% endblock content %}

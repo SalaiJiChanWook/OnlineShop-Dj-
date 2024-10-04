@@ -1,0 +1,20 @@
+<div class="container">
+    <h1 class="fashion_taital">Electronic</h1>
+    <div class="fashion_section_2">
+       <div class="row">
+          {% for viewComputers in viewComputers %}
+          <div class="col-lg-4 col-sm-4">
+             <div class="box_main">
+                <h4 class="shirt_text">{{viewComputers.name}}</h4>
+                <p class="price_text">Start Price  <span style="color: #262626;">{{viewComputers.price}}MMK</span></p>
+                <div class="electronic_img"><img src="{{viewComputers.imageURL}}"></div>
+                <div class="btn_main">
+                   <div class="buy_bt"><a href="#">Buy Now</a></div>
+                   <div class="seemore_bt"><a href="details/{{viewComputers.id}}">See More</a></div>
+                </div>
+             </div>
+          </div>
+          {% endfor %}
+       </div>
+    </div>
+ </div>
